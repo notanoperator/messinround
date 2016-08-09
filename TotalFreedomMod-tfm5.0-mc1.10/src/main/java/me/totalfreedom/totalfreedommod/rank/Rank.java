@@ -13,7 +13,9 @@ public enum Rank implements Displayable
     TELNET_ADMIN("a", "Telnet Admin", Type.ADMIN, "STA", ChatColor.DARK_GREEN),
     SENIOR_ADMIN("a", "Senior Admin", Type.ADMIN, "SrA", ChatColor.GOLD),
     TELNET_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE),
-    SUCCER("the", "Succer", Type.ADMIN_CONSOLE, "Succ", ChatColor.LIGHT_PURPLE),
+    SUCCER("the", "Succer", Type.ADMIN, "Succ", ChatColor.LIGHT_PURPLE),
+    SWEG("a", "fucking sweg ass kid", Type.ADMIN, "Sweg", ChatColor.GOLD),
+    FUCKBOY("a", "fuck boy", Type.PLAYER, "FUCKBOY", ChatColor.DARK_RED),
     SENIOR_CONSOLE("the", "Console", Type.ADMIN_CONSOLE, "Console", ChatColor.DARK_PURPLE);
     @Getter
     private final Type type;
