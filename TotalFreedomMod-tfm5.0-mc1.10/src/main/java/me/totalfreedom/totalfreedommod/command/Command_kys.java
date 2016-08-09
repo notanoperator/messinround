@@ -17,7 +17,9 @@ public class Command_kys extends FreedomCommand
     @Override
     protected boolean run(CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        
+        if (args.length < 1) { 
+            return false; 
+        }
         Player player = getPlayer(args[0]);
         if (player == null)
         {
@@ -25,10 +27,30 @@ public class Command_kys extends FreedomCommand
             return true;
         }
         
-        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&c" + sender + "&c- Kill yourself, " + player));
+        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&c" + sender.getName() + " &c- Kill yourself, " + player.getName()));
+        try {
+    Thread.sleep(3000);                 //1000 milliseconds is one second.
+} catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+}
         player.chat("No!");
-        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&c" + sender + "&c- Yes! No one likes you, what's the point? " + player));
+        try {
+    Thread.sleep(3000);                 //1000 milliseconds is one second.
+} catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+}
+        FUtil.bcastMsg(ChatColor.translateAlternateColorCodes('&', "&c" + sender.getName() + " &c- Yes! No one likes you, what's the point? " + player.getName()));
+        try {
+    Thread.sleep(3000);                 //1000 milliseconds is one second.
+} catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+}
         player.chat("You know what, maybe you're right! :'( Maybe I should kms!");
+        try {
+    Thread.sleep(2000);                 //1000 milliseconds is one second.
+} catch(InterruptedException ex) {
+    Thread.currentThread().interrupt();
+}
         player.chat("Goodbye cruel world! :(");
         player.setHealth(0);
         
