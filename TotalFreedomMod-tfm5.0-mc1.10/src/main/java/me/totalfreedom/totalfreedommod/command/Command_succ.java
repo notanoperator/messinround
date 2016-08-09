@@ -9,7 +9,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-@CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH)
+@CommandPermissions(level = Rank.SUCCER, source = SourceType.BOTH)
 @CommandParameters(
         description = "Succ on others",
         usage = "/<command> <player>",
@@ -20,7 +20,7 @@ public class Command_succ extends FreedomCommand
     public boolean run(CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
         Player player = (Player) sender;
-        if (args.length < 2) {
+        if (args.length > 2) {
          sender.sendMessage(ChatColor.GREEN + "You're a fucking retard, Correct Usage:");
          sender.sendMessage(ChatColor.RED + "/succ <player>");
         }
